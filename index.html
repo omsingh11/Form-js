@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>
+      College Registration Form
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    
+      <div class="row">
+        <div class="container">
+            <div class="wrap-1">
+              <div class="hed">
+              <h2>Registraion Form</h2>
+              </div>
+      <form action=""   name="contact" class="col s6" onsubmit="return val()">
+        <div class="row">
+          <div class="input-field col s6">
+              <label for="fname"></label>
+           <input type="text" id="fname" name="username"  placeholder="First Name">
+          
+        </div>
+        </div>
+        <div class="row">
+         <div class="input-field col s6">
+          <input type="text" id="lname" name="lastname" placeholder="Last Name"><br>
+          <label for="lname"></label>
+          </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+          <input type="password" id="pass" name="password" placeholder="Password">
+          <label for="pass" class="req"></label>
+        </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+          <input type="password" id="rpass" name="rpassword" placeholder="Re-enter your Password">
+          <label for="rpass"></label>
+        </div>
+        </div>
+         
+        <div class="row">
+            <div class="input-field col s4">
+              <p>Gender</p>
+                    <input type="radio" name="gender" id="mal"  class="ma">
+                    <label for="mal">Male</label>
+                    <input type="radio" name="gender" id="fmal" class="ma">
+                    <label for="fmal">Female</label>
+        </div>
+        </div>
+        <div class="row">
+        <div class="input-field col s6">
+        <input type="text" id="ag" name="age" maxlength="2" placeholder="Age">
+        <label for="ag" class="req"></label><br>
+        </div>
+        </div>
+        <div class="row">
+       <div class="input-field col s6">
+        <input type="date" id="dob" name="db" placeholder="DOB" class="date-picker"> 
+        <label for="dob" class="req"></label><br>
+        </div>
+        </div>
+       <div class="row">
+        <div class="input-field col s6">
+       <input type="email" id="e-mail" name="email" placeholder="Enter Your Email">
+       <label for="e-mail"></label><br>
+        </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+        <input type="number" id="pn" name="mob"  placeholder="Phone Number">
+        <label for="pn"></label>
+        </div>
+        </div> 
+        <label class="my-1 mr-2" for="city">Select Your City</label>
+        <select class="custom-select my-1 mr-sm-2" id="city" name="selec">
+          <option selected>Choose...</option>
+          <option value="1">Delhi</option>
+          <option value="2">Noida</option>
+          <option value="3">Haryana</option>
+          <option value="4">Varanasi</option>
+          <option value="5">Mirzapur</option>
+        </select>
+        
+        <div class="row">
+            <div class="input-field col s6">
+          <textarea rows="4" id="add" name="adds" class="materialize-textarea" placeholder="Address"></textarea>
+          <label for="add"></label>
+        </div>
+        </div>
+        
+       <div class="row">
+            <div class="input-field col s6">
+        <div class="file-field input-field">
+            <div class="btn">
+              <span>Upload Your Photo</span>
+              <input type="file" id="photo">
+            </div>
+            <div class="file-path-wrapper">
+              <input class="file-path validate" type="text"><br>
+            </div>
+          </div>
+          </div>
+       </div>
+          
+          <div class="row">
+              <div class="input-field col s6">
+          <div class="file-field input-field">
+              <div class="btn">
+                <span>Upload Your Signature</span>
+                <input type="file" id="sign">
+              </div>
+              <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
+              </div>
+            </div>
+          </div>
+            </div>
+      <div class="row">
+            <div class="input-field col s6">
+        <div class="file-field input-field">
+            <div class="btn">
+              <span>Upload Your AdharCard</span>
+              <input type="file" id="adhar">
+            </div>
+            <div class="file-path-wrapper">
+              <input class="file-path validate" type="text">
+            </div>
+          </div>
+          </div>
+          </div>
+        
+            <div class="row">
+                <div class="input-field col s4">
+            <input type="checkbox" name="checks" class="filled-in" id="term">
+            <label  for="term">Terms</label>
+        </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s4">
+        <input class="btn waves-effect waves-light" type="submit" >
+          </div>
+        </div>    
+      </form>
+      </div>
+      </div>
+     </div>
+    <script>
+    document.getElementById("fname").focus();
+    function val(){
+      var first=document.getElementById("fname").value;
+      var last=document.getElementById("lname").value;
+      var passd=document.getElementById("pass").value;
+      var rpassd=document.getElementById("rpass").value;
+      var ages=document.getElementById("ag").value;
+      var dateob=document.getElementById("dob").value;
+      var mails=document.getElementById("e-mail").value;
+      var phone=document.getElementById("pn").value;
+     var selc=document.contact.city.selectedIndex;
+     var addr=document.getElementById("add").value;
+     var ph=document.getElementById("photo").value;
+     var sig=document.getElementById("sign").value;
+     var adh=document.getElementById("adhar").value;
+     var ter=document.contact.term.checked;
+      if(first==""){
+        alert("Please Enter Your First name");
+        document.getElementById("fname").focus();
+        return false;     
+       }else if(last==""){
+         alert("Please enter your Last Name");
+         document.getElementById("lname").focus()
+         return false;
+       }else if(passd==""){
+         alert("Please Enter Your Password");
+         document.getElementById("pass").focus();
+         return false;
+       }else if(rpassd==""){
+         alert("Please Re-Enter Your Password");
+         document.getElementById("rpass").focus();
+         return false;
+       }else if(rpassd!=passd){
+         alert("Please Write Correct Password");
+         document.getElementById("rpass").focus();
+         return false;
+       }else if(contact.gender[0].checked==false && contact.gender[1].checked==false){
+         alert("Please Select Your Gender");
+         return false;
+       }else if(ages==""){
+         alert("Please Enter Your Age");
+         document.getElementById("ag").focus();
+          return false;
+       }else if(ages<18 || ages>55){
+         alert("please Enter Valid Age");
+         document.getElementById("ag").focus();
+         return false;
+       }else if(dateob==""){
+         alert("Please Enter Your DOB");
+        document.getElementById("dob").focus();
+        return false;
+       }else if(mails==""){
+        alert("Please Enter Your Email");
+        document.getElementById("e-mail").focus();
+        return false;
+       }else if(phone==""){
+        alert("Please Enter Your Phone Number");
+        document.getElementById("pn").focus();
+        return false;
+    }else if(phone.length>10){
+      alert("Please Enter Your 10 Digit Phone Number");
+        document.getElementById("pn").focus();
+        return false;
+    }else if(selc==""){
+       alert("Please select Your City");
+       document.getElementById("city").focus();
+        return false;
+  }else if(addr==""){
+    alert("Please Enter Your Address");
+    document.getElementById("add").focus();
+    return false;
+  }else if(ph==""){
+    alert("Please Upload Your Photo");
+    document.getElementById("photo").focus();
+    return false;
+  }else if(sig==""){
+    alert("Please Upload Your Signature");
+    document.getElementById("sign").focus();
+    return false;
+  }else if(adh==""){
+    alert("please Upload Your Adhar Card Photo");
+    document.getElementById("adhar").focus();
+    return false;
+  }else if(ter==""){
+    alert("Please Agree With Terms");
+    document.getElementById("term").focus();
+    return false;
+  }else {
+    alert("Thank You" + " " + first);
+    return true;
+  }
+}
+    </script>
+  </body>
+</html>
