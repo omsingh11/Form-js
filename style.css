@@ -13,13 +13,20 @@ body{
    margin-left:300px;
 }
 form{
-    background-color:hsl(59, 65%, 21%);
+    background-color:hsl(59, 94%, 50%);
    border:1px solid #fff;
-    border-radius:10px;
+    border-radius:15px;
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   
 }
 .hed{
-    margin-left:80px;
+    margin-left:120px;
     text-decoration:underline;
-    color:##5a1325
+    color:#fff;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+
+}
+
+::placeholder{
+    color:Black;
 }
