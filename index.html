@@ -22,22 +22,23 @@
         <div class="row">
           <div class="input-field col s6">
               <label for="fname"></label>
+              <div class="place">
            <input type="text" id="fname" name="username"  placeholder="First Name">
-          
+          </div>
         </div>
         </div>
         <div class="row">
          <div class="input-field col s6">
-          <input type="text" id="lname" name="lastname" placeholder="Last Name"><br>
+          <input type="text" id="lname" name="lastname" placeholder="Last Name">
           <label for="lname"></label>
           </div>
         </div>
         <div class="row">
             <div class="input-field col s6">
-          <input type="password" id="pass" name="password" placeholder="Password">
+          <input type="password"  id="pass" name="password" placeholder="Password">
           <label for="pass" class="req"></label>
         </div>
-        </div>
+        </div>  
         <div class="row">
             <div class="input-field col s6">
           <input type="password" id="rpass" name="rpassword" placeholder="Re-enter your Password">
@@ -46,7 +47,7 @@
         </div>
          
         <div class="row">
-            <div class="input-field col s4">
+            <div class="input-field col s6">
               <p>Gender</p>
                     <input type="radio" name="gender" id="mal"  class="ma">
                     <label for="mal">Male</label>
@@ -62,7 +63,7 @@
         </div>
         <div class="row">
        <div class="input-field col s6">
-        <input type="date" id="dob" name="db" placeholder="DOB" class="date-picker"> 
+        <input type="date" id="dob" name="db" placeholder="DOB" class="date-picker" minlength="new Date()"> 
         <label for="dob" class="req"></label><br>
         </div>
         </div>
@@ -137,16 +138,23 @@
           </div>
         
             <div class="row">
-                <div class="input-field col s4">
+                <div class="input-field col s6">
             <input type="checkbox" name="checks" class="filled-in" id="term">
             <label  for="term">Terms</label>
         </div>
         </div>
         <div class="row">
-          <div class="input-field col s4">
+          <div class="input-field col s6">
         <input class="btn waves-effect waves-light" type="submit" >
           </div>
-        </div>    
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <div class="down">
+            <a href="index.html" download><h5>Download</h5></a>
+            </div>
+          </div>
+        </div>
       </form>
       </div>
       </div>
